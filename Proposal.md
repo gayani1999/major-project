@@ -5,13 +5,13 @@ A game in which the player is given an assortment of coloured sections on the sc
 
 ## Must Have's
 - [ ] coloured sqaures that change colour upon a mouse click
-- [ ] a way for a random assorment of coloured shapes to fill the screen
+- [ ] coloured sqaure filled screen
 - [ ] a way to know when the whole screen in one colour
 - [ ] keep track of moves left
-- [ ] score
-- [ ] levels - increase in difficulty
+- [ ] levels
 
 ## Nice to Have's
+- [ ] score
 - [ ] bonus points 
 - [ ] sound effects
 
@@ -23,6 +23,7 @@ A game in which the player is given an assortment of coloured sections on the sc
   make levels (check if player has won a level, create new levels, etc.)
 
 **End of May - 1st week of June:**
+  add score
   add bonus points
   
 **1st Week of June - 2nd Week of June:**
