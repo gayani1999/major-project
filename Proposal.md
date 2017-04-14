@@ -23,11 +23,11 @@ A game in which the player is given an assortment of coloured sections on the sc
   make levels (check if player has won a level, create new levels, etc.)
 
 **End of May - 1st week of June:**
-  add score
+  add score,
   add bonus points
   
 **1st Week of June - 2nd Week of June:**
-  add sound effects
+  add sound effects,
   touch up small things - ex: aesthetic, etc.
 
 
