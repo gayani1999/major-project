@@ -1,7 +1,7 @@
 # Major Project Proposal - Computer Science 30
 
 ## Description
-A game in which the player is given an assortment of coloured sections on the screen and must cover the whole screen in one single colour in a certain amount of moves. This can be done by changing the colour of section to match an adjacent section (which will than make into into a larger, single section). 
+A game in which the player is given an assortment of coloured sections on the screen and must cover the whole screen in one single colour in a certain amount of moves. This can be done by changing the colour of section to match an adjacent section (which will then combine into a larger, single section). 
 
 ## Must Have's
 - [ ] coloured parts that change colour upon a mouse click
