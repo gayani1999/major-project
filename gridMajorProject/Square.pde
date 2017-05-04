@@ -15,11 +15,12 @@ class Square {
 
 
   //behaviour
-  void display(int _x, int _y, color _squareColour) {
+  void display(float _x, float _y, color _squareColour) {
     x = _x;
     y = _y;
     sqaureColour = _squareColour;
     noStroke();
+   
     fill(sqaureColour);
     rect(x, y, sideLength, sideLength);
   }
