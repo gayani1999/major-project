@@ -14,7 +14,7 @@ class Tile {
     tileType = _tileType;
 
     if (tileType == 'R') {
-     outline = color(180, 35, 35);
+      outline = color(180, 35, 35);
       colorOfSquare = color (255, 0, 0);
     } else if (tileType == 'B') {
       outline = color(35, 35, 180);

@@ -4,7 +4,7 @@ void setup() {
   size(600, 600);
 
 
-  currentLevel = new Level("LVL01.txt");
+  currentLevel = new Level("lvl1.txt");
 }
 
 
