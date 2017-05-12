@@ -5,7 +5,7 @@ Tile [][] squares;
 int heightSquares, widthSquares;
 
 Level(String levelFile) {
-    //load level data
+
     String lines[] = loadStrings(levelFile);
 
     heightSquares = lines.length;
@@ -14,7 +14,6 @@ Level(String levelFile) {
     float tileWidth = width/widthSquares;
     float tileHeight = height/heightSquares;
 
-    //println(tilesHigh, tilesWide);
 
     squares = new Tile[widthSquares][heightSquares];
      for (int y = 0; y < heightSquares; y++) {
