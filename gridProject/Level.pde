@@ -1,37 +1,38 @@
-//class Level {
+class Level {
 
-//  //data
-//  Tile [][] squares;
-//  int tileHigh, tileWide;
+  Tile[][] squares;
 
-//  Level(String levelFile) {
-//    //load level data
-//    String lines[] = loadStrings(levelFile);
+  int tilesHigh, tilesWide;
 
-//    tileHigh = lines.length;
-//    tileWide = lines[0].length();
 
-//    float widthSquares = width/tileWide;
-//    float heightSquares = height/tileHigh;
+  Level(String fileToLoad ) {
 
-//    //println(tilesHigh, tilesWide);
+    String lines[] = loadStrings(fileToLoad);
 
-//    squares = new Tile[tileWide][tileHigh];
+    tilesHigh = lines.length;
+    tilesWide = lines[0].length();
 
-//    for (int y = 0; y < tileHigh; y++) {
-//      for (int x = 0; x < tileWide; x++) {
-//        char squareColour = lines[y].charAt(x);
-//        squares[x][y] = new Tile(x*widthSquares, y*heightSquares, widthSquares, heightSquares, squareColour);
-//      }
-//    }
-//  }
+    float squareWidth = width/tilesWide;
+    float squareHeight = height/tilesHigh;
 
-//  void display() {
 
-//    for (int y = 0; y < tileHigh; y++) {
-//      for (int x = 0; x < tileWide; x++) {
-//        squares[x][y].display();
-//      }
-//    }
-//  }
-//}
+
+   squares = new Tile[tilesWide][tilesHigh];
+
+    for (int y = 0; y < tilesHigh; y++) {
+      for (int x = 0; x < tilesWide; x++) {
+        char squareColour = lines[y].charAt(x);
+        squares[x][y] = new Tile(x*squareWidth,y*squareHeight, squareWidth, squareHeight, squareColour);
+      }
+    }
+  }
+
+  void display() {
+
+    for (int y = 0; y < tilesHigh; y++) {
+      for (int x = 0; x < tilesWide; x++) {
+        squares[x][y].display();
+      }
+    }
+  }
+}
