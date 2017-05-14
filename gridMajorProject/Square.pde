@@ -24,4 +24,10 @@ class Square {
     fill(sqaureColour);
     rect(x, y, sideLength, sideLength);
   }
+  
+  void changeColour(){
+    int x = int(mouseX / sideLength);
+  int y = int(mouseY / sideLength);
+  
+  }
 }
