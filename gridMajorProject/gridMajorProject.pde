@@ -66,7 +66,7 @@ void displayScreen() {
 void createScreen() {
   for (int x=0; x<columns; x++) {
     for (int y=0; y<rows; y++) {
-      screen[x][y] = int(random(3));
+      screen[x][y] = int(random(2));
     }
   }
 }
