@@ -8,7 +8,7 @@ class Square {
   //constructor
   Square(float _sideLength) {
     sideLength = _sideLength;
-    
+
     //x = random(width);
     //y = random(height);
   }
@@ -20,14 +20,8 @@ class Square {
     y = _y;
     sqaureColour = _squareColour;
     noStroke();
-   
+
     fill(sqaureColour);
     rect(x, y, sideLength, sideLength);
-  }
-  
-  void changeColour(){
-    int x = int(mouseX / sideLength);
-  int y = int(mouseY / sideLength);
-  
   }
 }

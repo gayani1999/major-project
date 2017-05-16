@@ -62,7 +62,6 @@ void displayScreen() {
   }
 }
 
-
 void createScreen() {
   for (int x=0; x<columns; x++) {
     for (int y=0; y<rows; y++) {
