@@ -1,6 +1,6 @@
 //Name: Gayani Rajapaksha
 //Project Title: the grid for the major project
-//Purpose: creates a grid with various coloured squares that change colour once clicked. 
+//Purpose:  The grid for the major project. Creates it by using coloured squares that change colour once clicked. 
 
 
 int[][] screen;
@@ -44,7 +44,6 @@ void mousePressed() {
   }
 }
 
-
 void displayScreen() {
   for (int x = 0; x < columns; x++) {
     for (int y = 0; y< rows; y++) {
@@ -54,14 +53,10 @@ void displayScreen() {
       } else if (screen[x][y] == 1) {
 
         theSquares[x*y].display(x*cellSize, y*cellSize, red);
-      }// else if (screen[x][y] == 2) { // add more colour later
-
-      //  theSquares[x*y].display(x*cellSize, y*cellSize, yellow);
-      //}
+      }
     }
   }
 }
-
 void createScreen() {
   for (int x=0; x<columns; x++) {
     for (int y=0; y<rows; y++) {

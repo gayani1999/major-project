@@ -9,8 +9,6 @@ class Square {
   Square(float _sideLength) {
     sideLength = _sideLength;
 
-    //x = random(width);
-    //y = random(height);
   }
 
 
