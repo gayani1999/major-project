@@ -4,13 +4,11 @@ class Square {
   float sideLength;
   color sqaureColour;
   float  x, y;
+  boolean isOn;
 
   //constructor
   Square(float _sideLength) {
     sideLength = _sideLength;
-    
-    //x = random(width);
-    //y = random(height);
   }
 
 
@@ -19,11 +17,9 @@ class Square {
     x = _x;
     y = _y;
     sqaureColour = _squareColour;
+
     noStroke();
-   
     fill(sqaureColour);
     rect(x, y, sideLength, sideLength);
   }
-  
-
 }
