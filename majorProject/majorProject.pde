@@ -34,9 +34,9 @@ void mousePressed() {
   int y = int(mouseY / cellSize);
 
   if (mouseButton == LEFT) { 
-    checkIfColorShouldChange(x, y, blue);
+    checkIfColorShouldChange(x, y);
   } else if (mouseButton == RIGHT) {
-    checkIfColorShouldChange(x, y, red);
+    checkIfColorShouldChange(x, y);
   }
 }
 
@@ -65,14 +65,19 @@ void createScreen() {
   }
 }
 
-void checkIfColorShouldChange(int _x, int _y, color _colourToChangeTo) {
+void checkIfColorShouldChange(int _x, int _y) {
   int x = _x;
   int y = _y;
-  color colourToChangeTo = _colourToChangeTo;
-
-    for(int rowsChecked = 0; rowsChecked <= rows; rowsChecked++){
-      for(int columnsChecked = 0; columnsChecked <= columns; columnsChecked++){
-    //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
-      }
+  int squareToCheckFrom = x*y;
+  boolean allHaveSwitched = false;
+  while (allHaveSwitched == false) {
+  }
+  for (int rowsChecked = 0; rowsChecked <= rows; rowsChecked++) {
+    for (int columnsChecked = 0; columnsChecked <= columns; columnsChecked++) {
+      //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
     }
   }
+}
+void checkSquareBeside() {
+  
+}
