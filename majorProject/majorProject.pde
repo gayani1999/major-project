@@ -71,13 +71,18 @@ void checkIfColorShouldChange(int _x, int _y) {
   int squareToCheckFrom = x*y;
   boolean allHaveSwitched = false;
   while (allHaveSwitched == false) {
-  }
-  for (int rowsChecked = 0; rowsChecked <= rows; rowsChecked++) {
-    for (int columnsChecked = 0; columnsChecked <= columns; columnsChecked++) {
-      //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
+    //for red squares
+    if(theSquares[squareToCheckFrom].isOn){
+    if ((theSquares[squareToCheckFrom-rows].isOn == false)&&(theSquares[squareToCheckFrom+rows].isOn == false) && (theSquares[squareToCheckFrom+1].isOn == false) 
+      && (theSquares[squareToCheckFrom-1].isOn == false) && (theSquares[squareToCheckFrom].isOn == false)) {
+      allHaveSwitched = true;
+      }
     }
   }
 }
-void checkSquareBeside() {
-  
+void checkSquareBeside(int squareToCheckFrom, boolean allHaveSwitched) {
+  //for (int rowsChecked = 0; rowsChecked <= rows; rowsChecked++) {
+  //  for (int columnsChecked = 0; columnsChecked <= columns; columnsChecked++) {
+  //    //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
+  //  }
 }
