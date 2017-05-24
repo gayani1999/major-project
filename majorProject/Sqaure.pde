@@ -4,7 +4,8 @@ class Square {
   float sideLength;
   color sqaureColour;
   float  x, y;
-  boolean isOn;
+  int whichSquare;
+ // boolean isOn;
 
   //constructor
   Square(float _sideLength) {

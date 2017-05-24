@@ -6,15 +6,17 @@ Square[] theSquares;
 color blue = color(0, 0, 255);
 color red = color(255, 0, 0);
 int state;
+IntList squaresToChange;
+boolean allHaveSwitched 
 
-
-void setup() {
+  void setup() {
   size(600, 600);
   //state = 0;
   columns = 10;
   rows = 10;
   screen = new int[columns][rows];
   cellSize = width/columns;
+  squaresToChange = new IntList();
   theSquares = new Square[columns*rows];
   for (int i=0; i<theSquares.length; i++) {
     theSquares[i] = new Square(cellSize);
@@ -47,11 +49,11 @@ void displayScreen() {
       if (screen[x][y] == 0) {
 
         theSquares[x*y].display(x*cellSize, y*cellSize, blue);
-        theSquares[x*y].isOn = false;
-      } else if (screen[x][y] == 1) {
+        theSquares[x*y].whichSquare = 1;
+      } else if (screen[x][y] == 2) {
 
         theSquares[x*y].display(x*cellSize, y*cellSize, red);
-        theSquares[x*y].isOn = true;
+        theSquares[x*y].whichSquare = 1;
       }
     }
   }
@@ -69,20 +71,30 @@ void checkIfColorShouldChange(int _x, int _y) {
   int x = _x;
   int y = _y;
   int squareToCheckFrom = x*y;
-  boolean allHaveSwitched = false;
+  allHaveSwitched = false;
   while (allHaveSwitched == false) {
     //for red squares
-    if(theSquares[squareToCheckFrom].isOn){
-    if ((theSquares[squareToCheckFrom-rows].isOn == false)&&(theSquares[squareToCheckFrom+rows].isOn == false) && (theSquares[squareToCheckFrom+1].isOn == false) 
-      && (theSquares[squareToCheckFrom-1].isOn == false) && (theSquares[squareToCheckFrom].isOn == false)) {
-      allHaveSwitched = true;
+    if (theSquares[squareToCheckFrom].whichSquare == 1) {
+      if (theSquares[squareToCheckFrom + 1].whichSquare == 1) {
+        squaresToChange.append(squareToCheckFrom+1);
+      }
+      if (theSquares[squareToCheckFrom - 1].whichSquare == 1) {
+        squaresToChange.append(squareToCheckFrom-1);
+      }  if (theSquares[squareToCheckFrom + rows].whichSquare == 1) {
+        squaresToChange.append(squareToCheckFrom+ rows);
+      } if (theSquares[squareToCheckFrom - rows].whichSquare == 1) {
+        squaresToChange.append(squareToCheckFrom - rows);
+      }
+      if ((theSquares[squareToCheckFrom-rows].whichSquare !=1)&&(theSquares[squareToCheckFrom+rows].whichSquare !=1) && (theSquares[squareToCheckFrom+1].whichSquare !=1) 
+        && (theSquares[squareToCheckFrom-1].whichSquare != 1) && (theSquares[squareToCheckFrom].whichSquare != 1)) {
+        allHaveSwitched = true;
       }
     }
   }
 }
-void checkSquareBeside(int squareToCheckFrom, boolean allHaveSwitched) {
-  //for (int rowsChecked = 0; rowsChecked <= rows; rowsChecked++) {
-  //  for (int columnsChecked = 0; columnsChecked <= columns; columnsChecked++) {
-  //    //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
-  //  }
-}
+//void checkSquareBeside(int squareToCheckFrom, boolean allHaveSwitched) {
+//for (int rowsChecked = 0; rowsChecked <= rows; rowsChecked++) {
+//  for (int columnsChecked = 0; columnsChecked <= columns; columnsChecked++) {
+//    //theSquares[x*y].display(x*cellSize, y*cellSize, colourToChangeTo);
+//  }
+//}
