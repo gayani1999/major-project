@@ -2,25 +2,30 @@ class Square {
 
   //data
   float sideLength;
-  color sqaureColour;
+  color squareColour;
   float  x, y;
   int whichSquare;
- // boolean isOn;
+  char squareType;
+  // boolean isOn;
 
   //constructor
-  Square(float _sideLength) {
-    sideLength = _sideLength;
-  }
-
-
-  //behaviour
-  void display(float _x, float _y, color _squareColour) {
+  Square(float _x, float _y, float _sideLength, char _squareType){
     x = _x;
     y = _y;
-    sqaureColour = _squareColour;
+    sideLength = _sideLength;
+    squareType = _squareType;
+    if (squareType == 'B') {
+      squareColour = color(0, 0, 255);
+      whichSquare = 1;
+    } else if (squareType == 'R') {
+      squareColour = color(255, 0, 0);
+      whichSquare = 2;
+    }
+  }
+  void display() {
 
     noStroke();
-    fill(sqaureColour);
+    fill(squareColour);
     rect(x, y, sideLength, sideLength);
   }
 }
