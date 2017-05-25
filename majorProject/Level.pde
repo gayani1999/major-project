@@ -1,22 +1,20 @@
 class Level {
 
- Square[][] squares;
+  Square[][] squares;
   PImage levelBackground;
-  int squaresHigh, squaresWide;
+  int squaresHigh, squaresWide, cellSize;
 
 
   Level(String fileToLoad) {
-    //load background
-  
 
 
     //load level data
     String lines[] = loadStrings(fileToLoad);
 
     squaresHigh = lines.length;
-   squaresWide = lines[0].length();
+    squaresWide = lines[0].length();
 
-    float cellSize = width/squaresWide;
+     cellSize = width/squaresWide;
 
 
 
@@ -26,18 +24,21 @@ class Level {
     for (int y = 0; y <squaresHigh; y++) {
       for (int x = 0; x < squaresWide; x++) {
         char squareColor = lines[y].charAt(x);
-        squares[x][y] = new Square(x*cellSize, y*cellSize,cellSize, squareColor);
+        squares[x][y] = new Square(x*cellSize, y*cellSize, cellSize, squareColor);
       }
     }
   }
 
   void display() {
-
-
     for (int y = 0; y < squaresHigh; y++) {
       for (int x = 0; x < squaresWide; x++) {
         squares[x][y].display();
       }
     }
+  }
+  void changeColour() {
+    int x = mouseX/cellSize;
+   int y = mouseY/cellSize;
+    squares[x][y].changeColour();
   }
 }

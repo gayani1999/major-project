@@ -9,7 +9,7 @@ class Square {
   // boolean isOn;
 
   //constructor
-  Square(float _x, float _y, float _sideLength, char _squareType){
+  Square(float _x, float _y, float _sideLength, char _squareType) {
     x = _x;
     y = _y;
     sideLength = _sideLength;
@@ -27,5 +27,13 @@ class Square {
     noStroke();
     fill(squareColour);
     rect(x, y, sideLength, sideLength);
+  }
+  void changeColour() {
+    if (whichSquare ==1) {
+      squareColour = color(255, 0, 0);
+    } else if (whichSquare == 2) {
+      squareColour = color(0, 0, 255);
+    }
+    display();
   }
 }
