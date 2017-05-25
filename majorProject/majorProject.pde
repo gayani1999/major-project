@@ -1,5 +1,3 @@
-
-
 Level currentLevel;
 
 void setup() {
@@ -10,6 +8,7 @@ void setup() {
 void draw() {
  currentLevel.display();
 }
+
 void mousePressed(){
 currentLevel.changeColour();
 }

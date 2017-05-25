@@ -14,22 +14,24 @@ class Square {
     y = _y;
     sideLength = _sideLength;
     squareType = _squareType;
-    if (squareType == 'B') {
+    if (squareType == 'B') { //blue
       squareColour = color(0, 0, 255);
       whichSquare = 1;
-    } else if (squareType == 'R') {
+    } else if (squareType == 'R') { //red 
       squareColour = color(255, 0, 0);
       whichSquare = 2;
     }
   }
+  
+  //behaviour
   void display() {
-
     noStroke();
     fill(squareColour);
     rect(x, y, sideLength, sideLength);
   }
+
   void changeColour() {
-    if (whichSquare ==1) {
+    if (whichSquare == 1) {
       squareColour = color(255, 0, 0);
     } else if (whichSquare == 2) {
       squareColour = color(0, 0, 255);

@@ -7,7 +7,7 @@ class Button {
   String label;
   boolean hasBeenClicked;
 
-  //contructor
+  //constructor
   Button() {
     x = width/2;
     y = height/2;
